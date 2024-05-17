@@ -1,0 +1,83 @@
+@startUML
+skinparam linetype ortho
+
+class Library{
+}
+
+interface GraphicComponentFactory{
+	+createButton()
+	+createMenu()
+}
+
+class LinuxFactory{
+	+createButton()
+    +createMenu()
+
+}
+
+class MacFactory{
+	+createButton()
+    +createMenu()
+
+}
+
+class WindowsFactory{
+    +createButton()
+    +createMenu()
+}
+
+GraphicComponentFactory <|.. LinuxFactory
+GraphicComponentFactory <|.. MacFactory
+GraphicComponentFactory <|.. WindowsFactory
+
+Library ..> GraphicComponentFactory
+
+abstract class Button{
+}
+
+class LinuxButton{
+}
+
+class MacButton{
+}
+
+class WindowsButton{
+}
+
+Button <|-- LinuxButton
+Button <|-- MacButton
+Button <|-- WindowsButton
+
+
+abstract class Menu{
+}
+
+class LinuxMenu{
+}
+
+class MacMenu{
+}
+
+class WindowsMenu{
+}
+
+Menu <|-- LinuxMenu
+Menu <|-- MacMenu
+Menu <|-- WindowsMenu
+
+
+Library ..> Menu
+Library ..> Button
+
+
+LinuxFactory ..> LinuxButton
+LinuxFactory ..> LinuxMenu
+
+
+MacFactory ..> MacButton
+MacFactory ..> MacMenu
+
+WindowsFactory ..> WindowsButton
+WindowsFactory ..> WindowsMenu
+
+@endUML
