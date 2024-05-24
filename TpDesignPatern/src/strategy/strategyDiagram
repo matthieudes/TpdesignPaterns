@@ -1,0 +1,30 @@
+@startUML
+skinparam linetype ortho
+
+class RecruitmentView {
+	+process()
+}
+interface DataProcessing {
+	+process()
+}
+RecruitmentView --> "1 #processing" DataProcessing
+
+
+class LinearRegression {
+	+process()
+}
+
+class ClassificationTree {
+	+process()
+}
+
+class KMeansPartitioning {
+	+process()
+}
+
+DataProcessing <|-- LinearRegression
+DataProcessing <|-- ClassificationTree
+DataProcessing <|-- KMeansPartitioning
+
+
+@endUML

@@ -1,0 +1,14 @@
+@startUML
+skinparam linetype ortho
+
+class CandyCrushRanking{
+    {static} -instance:CandyCrushRanking = null
+    {static} +Instance()
+    +addScore(player,score)
+    +removeScore(player)
+    +getWinner():String
+    +getLoser():String
+    +getRanking():Map<String,Integer>
+}
+
+@endUML
