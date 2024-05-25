@@ -21,7 +21,7 @@ public class User {
         CandyCrushRanking ranking2 = CandyCrushRanking.getInstance();
         System.out.println("Second call to Instance() singleton: " + ranking2);
 
-        System.out.println("Winner is: " + ranking2.getWinner());
+        System.out.println("Winner is:  " + ranking2.getWinner());
         System.out.println("Loser is: " + ranking2.getLoser());
 
         System.out.println("Ranking 2:");

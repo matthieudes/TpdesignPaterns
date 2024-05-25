@@ -1,13 +1,13 @@
 package abstractFactory;
 
-public class LinuxFactory implements GraphicComponentfactory {
+public class WindowsFactory implements GraphicComponentfactory{
     @Override
     public Button createButton(String text) {
-        return new LinuxButton("Linux");
+        return new WindowsButton("Windows");
     }
 
     @Override
     public Menu createMenu(String text) {
-        return new LinuxMenu("Linux");
+        return new WindowsMenu("Windows");
     }
 }

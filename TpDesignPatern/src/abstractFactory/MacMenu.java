@@ -9,9 +9,9 @@ public class MacMenu extends Menu{
     }
 
     @Override
-    public JMenuBar toSwingMenu() {
-        JMenuBar mb = new JMenuBar();
-        mb.add(Utils.createMenu("Menu "+text, "Mac"));
-        return mb;
+    public void toSwingMenu() {
+        System.out.println(" \ud83d\uddd7 Menu"+text);
     }
+
+
 }

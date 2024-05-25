@@ -1,0 +1,58 @@
+@startUML
+skinparam linetype ortho
+
+class ProgramManager{
+	+build()
+}
+
+class Customer{
+}
+
+abstract class QueryBuilder{
+	+buildLimitQuery()
+	+buildSubstrQuery()
+}
+
+Customer --> ProgramManager
+ProgramManager --> QueryBuilder
+
+class OracleQueryBuilder{
+	+buildLimitQuery()
+	+buildSubstrQuery()
+}
+
+class MySQLQueryBuilder{
+	+buildLimitQuery()
+	+buildSubstrQuery()
+}
+
+QueryBuilder <|-- OracleQueryBuilder
+QueryBuilder <|-- MySQLQueryBuilder
+
+abstract class Program{
+	+addQuery()
+	+print()
+}
+
+class OracleProgram{
+	+addQuery()
+	+print()
+}
+
+class MySQLProgram{
+	+addQuery()
+	+print()
+}
+
+Program <|-- OracleProgram
+Program <|-- MySQLProgram
+QueryBuilder ..> Program
+MySQLQueryBuilder ..> MySQLProgram
+OracleQueryBuilder ..> OracleProgram
+
+Customer ..> MySQLQueryBuilder
+Customer ..> OracleQueryBuilder
+
+QueryBuilder --> "1 #Program" Program
+
+@endUML

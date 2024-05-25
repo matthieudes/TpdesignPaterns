@@ -9,7 +9,7 @@ public class MacButton extends Button{
     }
 
     @Override
-    public java.awt.Button toSwingButton() {
-        return new java.awt.Button("bouton Mac de "+super.text);
+    public void show() {
+        System.out.println("\ud83d\uddd4 Bouton"+text);
     }
 }

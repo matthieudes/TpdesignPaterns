@@ -11,6 +11,10 @@ public class Data {
         this.content = content;
     }
 
+    public void print(){
+        System.out.println(this.content);
+    }
+
     public String getFormat() {
         return format;
     }

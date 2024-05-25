@@ -1,0 +1,29 @@
+@startUML
+skinparam linetype ortho
+
+abstract class AbstractFile{
+    +addFile()
+    +display()
+    +calculateSize()
+}
+
+class Directory{
+    +addFile()
+    +display()
+    +calculateSize()
+}
+
+class File {
+    +addFile()
+    +display()
+    +calculateSize()
+}
+
+AbstractFile "1..* #files" <|-- Directory
+AbstractFile <--o Directory
+AbstractFile <|-- File
+
+
+
+
+@endUML

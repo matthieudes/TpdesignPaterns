@@ -1,14 +1,21 @@
 @startUML
 skinparam linetype ortho
 
+
 class RecruitmentView {
 	+process()
 }
+
+class Data {
+}
+
+RecruitmentView *-- Data
+
 interface DataProcessing {
 	+process()
 }
-RecruitmentView --> "1 #processing" DataProcessing
 
+RecruitmentView --> "1 #processing" DataProcessing
 
 class LinearRegression {
 	+process()

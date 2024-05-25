@@ -8,7 +8,7 @@ public class LinuxButton extends Button {
     }
 
     @Override
-    public java.awt.Button toSwingButton() {
-        return new java.awt.Button("bouton Linux de "+super.text);
+    public void show() {
+        System.out.println("\ud83d\uddd4 Bouton"+text);
     }
 }

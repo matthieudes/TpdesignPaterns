@@ -9,9 +9,7 @@ public class LinuxMenu extends Menu{
     }
 
     @Override
-    public JMenuBar toSwingMenu() {
-        JMenuBar mb = new JMenuBar();
-        mb.add(Utils.createMenu("Menu "+ text, "Linux"));
-        return mb;
+    public void toSwingMenu() {
+        System.out.println(" \ud83d\uddd7 Menu"+text);
     }
 }

@@ -8,5 +8,5 @@ public abstract class Menu {
     public Menu(String text) {
         this.text = text;
     }
-    public abstract JMenuBar toSwingMenu();
+    public abstract void toSwingMenu();
 }

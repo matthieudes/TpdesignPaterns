@@ -9,5 +9,5 @@ public abstract class Button {
         this.text = text;
     }
 
-    public abstract java.awt.Button toSwingButton();
+    public abstract void show();
 }
